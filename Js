@@ -1,0 +1,29 @@
+```javascript
+// Toggle mobile menu
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+
+// Optional: Handle contact form submission
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault(); // prevent real submission
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  if (name && email && message) {
+    alert(`Thank you, ${name}! Your message has been sent.`);
+    form.reset();
+  } else {
+    alert("Please fill out all fields.");
+  }
+});
+```
+
+`
